@@ -1,0 +1,87 @@
+<html>
+    
+    <head>
+        
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+    </head>
+    
+    <body onload='letra(&apos;corpo&apos;);'
+        style="
+            font:normal 120% verdana,arial,helvetica;
+            width: 100%; height: 100%; padding: 0; margin: 0;
+        " 
+    >
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### CORPO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+        <div id="corpo">
+            
+            <div style="width: 100%;">  
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+                        <tr><td align="center">
+                                <img width="904" height="461" title="De Zero a Nove" 
+                                     src="0001.gif">  
+                        </td></tr>
+                    </table>
+                </div>
+            
+        </div>
+        <!--id="corpo"-->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+-0
+-1
+-2
+- #### CORPO FIM #### --> 
+<!-- 
+-0
+-1
+-2    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--> 
+
+
+<script type="text/javascript">
+function printDiv(divID) {
+   var body = document.body.innerHTML;
+   var conteudo = document.getElementById(divID).innerHTML;
+   
+   document.body.innerHTML = conteudo;
+   
+   window.print();
+   
+   document.body.innerHTML = body;
+}
+
+function letra( id ) {
+    var valor_inicial = "120%";
+    document.getElementById( id ).style.fontSize = valor_inicial;
+}
+
+function tamanhofonte( op, id ) {
+    var incremento = 2;  
+    var local_alterado = document.getElementById( id ).style.fontSize;
+    local_alterado = parseInt(local_alterado.replace(/%/,""));
+
+    switch( op ) {
+        
+        case "mais": local_alterado += incremento; break;
+            case "menos": local_alterado -= incremento; break;
+                case "padrao": local_alterado = "120"; break;
+    }
+    
+    document.getElementById( id ).style.fontSize = local_alterado + '%';
+}
+</script> 
+
+
+    </body>
+</html>
